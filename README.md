@@ -20,7 +20,7 @@ It should be after testing with a local server but again don't take my word for 
 ### Additional Information:
 - Please ask before using the code for this mod or any assets inside/used by it!
 ---
-<img src="https://github.com/TheFarawayDev/Satisfactory-Mods/blob/main/Better-Alternate-Recipes/Icons/Multiplayer.png?raw=true" width="150">
-<img src="https://github.com/TheFarawayDev/Satisfactory-Mods/blob/main/Better-Alternate-Recipes/Icons/Version_Compatibility.png?raw=true" width="150">
+<img src="https://github.com/TheFarawayDev/Better_Recipes_x10/blob/main/Images/Multiplayer.png?raw=true" width="150">
+<img src="https://github.com/TheFarawayDev/Better_Recipes_x10/blob/main/Images/Version_Compatibility.png?raw=true" width="150">
 
 ---
