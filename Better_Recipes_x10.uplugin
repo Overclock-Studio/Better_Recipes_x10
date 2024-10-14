@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.1.6",
+	"FriendlyName": "Better Alternate Recipes",
+	"Description": "A mod that gives you x10 recipes & more!",
+	"Category": "Modding",
+	"CreatedBy": "TheFarawayDev",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "SML",
+			"Enabled": true,
+			"SemVersion": "^3.8.0"
+		}
+	],
+	"SemVersion": "1.1.6",
+	"GameVersion": ">=365306"
+}
