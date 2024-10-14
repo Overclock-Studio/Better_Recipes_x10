@@ -11,9 +11,16 @@ A mod that makes recipes way more efficient. Every recipe works like this: throw
 Generally, yes. This mod should work alongside most others, but I haven't tested all the mods in the world so don't take my word for it.
 
 ##### Is it compatible with multiplayer?
-It should be after testing with a local server but again don't take my word for it as I am primarily new to this and if any problems arise please report them on the Github page when it is made public.
+It should be after testing with a local server but again don't take my word for it as I am primarily new to this and if any problems arise please report them on the [Github Page](https://github.com/TheFarawayDev/Satisfactory-Mods/issues/new?assignees=TheFarawayDev&labels=bug&projects=&template=bug_report.md&title=).
 
 ### Planned Features:
 - New Machines (Power, Production, Storage)
 - Stuff recommended by you!
 
+### Additional Information:
+- Please ask before using the code for this mod or any assets inside/used by it!
+---
+<img src="https://github.com/TheFarawayDev/Satisfactory-Mods/blob/main/Better-Alternate-Recipes/Icons/Multiplayer.png?raw=true" width="150">
+<img src="https://github.com/TheFarawayDev/Satisfactory-Mods/blob/main/Better-Alternate-Recipes/Icons/Version_Compatibility.png?raw=true" width="150">
+
+---
