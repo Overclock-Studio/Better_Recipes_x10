@@ -14,8 +14,7 @@ Generally, yes. This mod should work alongside most others, but I haven't tested
 It should be after testing with a local server but again don't take my word for it as I am primarily new to this and if any problems arise please report them on the [Github Page](https://github.com/TheFarawayDev/Satisfactory-Mods/issues/new?assignees=TheFarawayDev&labels=bug&projects=&template=bug_report.md&title=).
 
 ### Planned Features:
-- New Machines (Power, Production, Storage)
-- Stuff recommended by you!
+- Add a feature to allow users to set custom inputs and outputs for values, and it allows for the customization of fluids and solids seperate.
 
 ### Additional Information:
 - Please ask before using the code for this mod or any assets inside/used by it!
