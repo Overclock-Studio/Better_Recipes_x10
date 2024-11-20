@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Board</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .status-board {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+    .status-bar:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    }
+    .tier-name {
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .completed { background-color: #c8e6c9; } /* Light Green */
+    .in-progress { background-color: #b3e5fc; } /* Light Blue */
+    .delayed { background-color: #fff3cd; }   /* Light Yellow */
+    #details {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1e1e2f;
+        color: #d0d0e1;
+      }
+      h1 {
+        color: #ffffff;
+      }
+      .status-bar {
+        background-color: #2b2b3b;
+        color: #f0f0f5;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      }
+      .status-bar:hover {
+        background-color: #3a3a4d;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      }
+      .completed { background-color: #388e3c; color: #e0f7e5; } /* Darker Green with contrast */
+      .in-progress { background-color: #0277bd; color: #e1f5fe; } /* Darker Blue with contrast */
+      .delayed { background-color: #ffab40; color: #3b2f1c; }    /* Darker Orange with contrast */
+      #details {
+        background-color: #2b2b3b;
+        border: 1px solid #555;
+        color: #e0e0e0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Status Board</h1>
+  <div id="statusBoard" class="status-board"></div>
+  <div id="details"></div>
+
+  <script>
+    const jsonData = [
+      { "tier": "Tier 0", "status": "COMPLETED", "date": "Nov. 5", "details": "Tier 0 tasks completed on Nov. 5." },
+      { "tier": "Tier 1", "status": "COMPLETED", "date": "Nov. 6", "details": "Tier 1 tasks completed on Nov. 6." },
+      { "tier": "Tier 2", "status": "COMPLETED", "date": "Nov. 6", "details": "Tier 2 tasks completed on Nov. 6." },
+      { "tier": "Tier 3", "status": "COMPLETED", "date": "Nov. 7", "details": "Tier 3 tasks completed on Nov. 7." },
+      { "tier": "Tier 4", "status": "COMPLETED", "date": "Nov. 7", "details": "Tier 4 tasks completed on Nov. 7." },
+      { "tier": "Tier 5", "status": "IN-PROGRESS", "date": "Nov. 20", "details": "Tier 5 tasks are in progress as of Nov. 18." },
+      { "tier": "Tier 6", "status": "DELAYED", "date": "TBA", "details": "Tier 6 tasks are delayed." },
+      { "tier": "Tier 7", "status": "DELAYED", "date": "TBA", "details": "Tier 7 tasks are delayed." },
+      { "tier": "Tier 8", "status": "DELAYED", "date": "TBA", "details": "Tier 8 tasks are delayed." },
+      { "tier": "Tier 9", "status": "DELAYED", "date": "TBA", "details": "Tier 9 tasks are delayed." },
+      { "tier": "Research", "status": "DELAYED", "date": "TBA", "details": "Research tasks are delayed." }
+    ];
+
+    function renderStatusBoard(data) {
+      const board = document.getElementById('statusBoard');
+      const detailsDiv = document.getElementById('details');
+
+      data.forEach(item => {
+        // Create a bar for each status
+        const statusBar = document.createElement('div');
+        statusBar.className = `status-bar ${item.status.toLowerCase().replace(/ /g, '-')}`;
+        statusBar.innerHTML = `
+          <span class="tier-name">${item.tier}</span>
+          <span>${item.status}${item.date ? `, ${item.date}` : ''}</span>
+        `;
+
+        // Add click event to show details
+        statusBar.addEventListener('click', () => {
+          detailsDiv.style.display = 'block';
+          detailsDiv.textContent = item.details;
+        });
+
+        board.appendChild(statusBar);
+      });
+    }
+
+    // Render the board on page load
+    renderStatusBoard(jsonData);
+  </script>
+</body>
+</html>
